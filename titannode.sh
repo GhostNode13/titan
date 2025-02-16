@@ -15,10 +15,6 @@ if ! command -v curl &> /dev/null; then
     sudo apt install curl -y
 fi
 
-# Отображение логотипа
-curl -s https://raw.githubusercontent.com/GhostNode13/titan/refs/heads/main/logo.sh | bash
-
-
 # Меню
 echo -e "${YELLOW}🔍 Выберите действие:${NC}"
 echo -e "${CYAN}1) 🚀 Установка ноды${NC}"
@@ -94,14 +90,17 @@ case $choice in
         # Проверка логов
         docker logs -f titan
         ;;
+
     2)
         echo -e "${BLUE}🔄 Проверка обновлений...${NC}"
         echo -e "${GREEN}✅ У вашей ноды актуальная версия.${NC}"
         ;;
+
     3)
         echo -e "${BLUE}📋 Просмотр логов...${NC}"
         docker logs -f titan
         ;;
+
     4)
         echo -e "${BLUE}🔄 Перезапускаем ноду...${NC}"
         docker restart titan
@@ -111,6 +110,7 @@ case $choice in
         # Проверка логов
         docker logs -f titan
         ;;
+
     5)
         echo -e "${RED}🗑️ Удаляем ноду Titan...${NC}"
         docker stop titan
@@ -120,7 +120,9 @@ case $choice in
         echo -e "${GREEN}✨ Нода Titan успешно удалена!${NC}"
         sleep 2
         ;;
+
     *)
         echo -e "${RED}❌ Неверный выбор! Пожалуйста, введите номер от 1 до 5.${NC}"
         ;;
 esac
+
