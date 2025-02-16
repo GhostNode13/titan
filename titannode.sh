@@ -9,9 +9,6 @@ PURPLE='\033[0;35m'
 CYAN='\033[0;36m'
 NC='\033[0m' # Нет цвета (сброс цвета)
 
-
-
-
 # Проверка наличия curl и установка, если не установлен
 if ! command -v curl &> /dev/null; then
     sudo apt update
