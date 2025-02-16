@@ -18,7 +18,7 @@ if ! command -v curl &> /dev/null; then
     sudo apt install curl -y
 fi
 
-curl -s https://raw.githubusercontent.com/GhostNode13/titan/refs/heads/main/logo.sh | bash
+
 
 # Меню
 echo -e "${YELLOW}🔍 Выберите действие:${NC}"
