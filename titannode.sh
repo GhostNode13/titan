@@ -15,6 +15,8 @@ if ! command -v curl &> /dev/null; then
     sudo apt install curl -y
 fi
 
+# Отображение логотипа
+curl -s https://raw.githubusercontent.com/Mozgiii9/NodeRunnerScripts/refs/heads/main/logo.sh | bash
 
 
 # Меню
