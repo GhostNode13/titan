@@ -16,7 +16,7 @@ if ! command -v curl &> /dev/null; then
 fi
 
 # Отображение логотипа
-curl -s https://raw.githubusercontent.com/Mozgiii9/NodeRunnerScripts/refs/heads/main/logo.sh | bash
+curl -s https://raw.githubusercontent.com/GhostNode13/titan/refs/heads/main/logo.sh | bash
 
 
 # Меню
