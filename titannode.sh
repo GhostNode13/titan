@@ -1,34 +1,35 @@
 #!/bin/bash
 
 # Цвета текста
-LIGHT_GREEN='\033[1;32m'
-GREEN='\033[0;32m'
-DARK_GREEN='\033[0;33m'
-BLUE='\033[0;34m'
-CYAN='\033[0;36m'
 RED='\033[0;31m'
-NC='\033[0m'  # Нет цвета (сброс цвета)
+GREEN='\033[0;32m'
+YELLOW='\033[0;33m'
+BLUE='\033[0;34m'
+PURPLE='\033[0;35m'
+CYAN='\033[0;36m'
+NC='\033[0m' # Нет цвета (сброс цвета)
 
-
+# Проверка наличия curl и установка, если не установлен
 if ! command -v curl &> /dev/null; then
     sudo apt update
     sudo apt install curl -y
 fi
 
 # Отображение логотипа
-curl -s https://raw.githubusercontent.com/GhostNode13/titan/main/logo.sh | bash
+curl -s https://raw.githubusercontent.com/Mozgiii9/NodeRunnerScripts/refs/heads/main/logo.sh | bash
 
 # Меню
-while true; do
-    echo -e "${LIGHT_GREEN}📍 Выберите действие:${NC}"
-    echo -e "${CYAN}📦 Установка ноды${NC}"
-    echo -e "${CYAN}🔄 Перезапуск ноды${NC}"
-    echo -e "${CYAN}👀 Просмотр логов${NC}"
-    echo -e "${CYAN}🗑️ Удаление ноды${NC}"
-    echo -e "${LIGHT_GREEN}📜  Введите номер действия (или 'q' для выхода):${NC} "
-    read choice
+echo -e "${YELLOW}🔍 Выберите действие:${NC}"
+echo -e "${CYAN}1) 🚀 Установка ноды${NC}"
+echo -e "${CYAN}2) 🔄 Обновление ноды${NC}"
+echo -e "${CYAN}3) 📋 Просмотр логов${NC}"
+echo -e "${CYAN}4) 🔄 Перезапуск ноды${NC}"
+echo -e "${CYAN}5) 🗑️ Удаление ноды${NC}"
 
-    case $choice in
+echo -e "${YELLOW}⌨️  Введите номер:${NC} "
+read choice
+
+case $choice in
     1)
         echo -e "${BLUE}🚀 Начинаем установку ноды Titan...${NC}"
 
